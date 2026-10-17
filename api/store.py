@@ -1,12 +1,3 @@
-"""Persistência do estado da API.
-
-* Com DATABASE_URL (PostgreSQL): grava o estado em uma tabela (uma linha JSONB). Os dados sobrevivem a
-  reinícios e novos deploys.
-* Sem DATABASE_URL: se STATE_FILE existir, usa um arquivo JSON local; senão guarda só na memória (demonstração).
-
-Rode a API com UM processo. Para muitos usuários, o próximo passo é trocar este arquivo por tabelas
-relacionais (veja README).
-"""
 import json
 import logging
 import os
