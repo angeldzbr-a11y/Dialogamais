@@ -1,9 +1,3 @@
-"""Testes da API do Dialoga+ (a IA do Google é sempre simulada: nenhum teste gasta sua chave).
-
-Como rodar, dentro da pasta api:
-    pip install -r requirements.txt
-    python -m unittest -v
-"""
 import asyncio
 import json
 import os
