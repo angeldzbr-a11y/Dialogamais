@@ -1,8 +1,3 @@
-"""Cliente do Google Gemini (API REST, método generateContent).
-
-A chave vai no cabeçalho x-goog-api-key (nunca na URL, para não aparecer em logs) e existe só no servidor.
-Nada que identifique o estudante (nome, e-mail, sala) é enviado: só os textos das situações e das respostas.
-"""
 import asyncio
 import json
 import logging
