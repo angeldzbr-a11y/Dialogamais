@@ -1,4 +1,3 @@
-# Site estatico (front-end). O endereco da API vem da variavel de ambiente DIALOGA_API (painel do Netlify).
 [build]
   command = "sh build-config.sh"
   publish = "docs"
