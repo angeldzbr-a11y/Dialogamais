@@ -1,0 +1,11 @@
+# Nunca envie chaves ou dados para o GitHub
+.env
+*.env
+estado.json
+estado.json.tmp
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store

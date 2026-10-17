@@ -1,0 +1,12 @@
+# Site estatico (front-end). O endereco da API vem da variavel de ambiente DIALOGA_API (painel do Netlify).
+[build]
+  command = "sh build-config.sh"
+  publish = "docs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

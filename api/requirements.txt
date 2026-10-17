@@ -1,0 +1,6 @@
+# API do Dialoga+ (Python 3.10 ou mais novo)
+fastapi>=0.110
+uvicorn[standard]>=0.29
+httpx>=0.27
+psycopg2-binary>=2.9
+python-dotenv>=1.0
