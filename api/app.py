@@ -1,4 +1,4 @@
-try:
+try: 
     from dotenv import load_dotenv
     load_dotenv()
 except ImportError:
@@ -870,11 +870,15 @@ def exportar_meus_dados(u=Depends(requer_login)):
             "observacao": "A senha não é guardada em texto: só um hash, que não faz parte desta cópia."}
 
 
-# persistência e retenção
+# ---------------------------------------------------------------- persistência e retenção
 def _snapshot():
     with LOCK:
-        return json.loads(json.dumps({"v": 1, "users": USERS, "prog": PROG, "salas": SALAS,
-                                      "hist": HIST, "drafts": DRAFTS}, default=str))
+        catalogo = {"temas": [{"id": k, "nome": v["nome"]} for k, v in THEMES.items()],
+                    "cenarios": [{"id": s["id"], "tema_id": k, "nivel": s.get("nivel", 1), "texto": s["texto"],
+                                  "criterios": s["criterios"], "ativo": s["ativo"]}
+                                 for k, lista in SCEN.items() for s in lista]}
+        return json.loads(json.dumps({"v": 2, "users": USERS, "prog": PROG, "salas": SALAS, "hist": HIST,
+                                      "drafts": DRAFTS, "catalogo": catalogo}, default=str))
 
 
 def gravar_estado():
