@@ -7,7 +7,7 @@ from pathlib import Path
 log = logging.getLogger("dialoga.store")
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 STATE_FILE = os.getenv("STATE_FILE", "")
-DIALETO = "postgres"  # os testes usam "sqlite"
+DIALETO = "postgres"
 SCHEMA = Path(__file__).with_name("schema.sql")
 _schema_pronto = False
 
